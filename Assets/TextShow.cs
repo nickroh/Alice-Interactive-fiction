@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextEffect : MonoBehaviour
+public class TextShow : MonoBehaviour
 {
-    // Start is called before the first frame update
-	
-	public Text txt;
+    public Text txt;
 	private string story;
 
 	void Awake()
@@ -25,8 +23,7 @@ public class TextEffect : MonoBehaviour
 		foreach(char c in story)
 		{
 			txt.text += c;
-			yield return new WaitForSeconds (0.03f);
+			yield return new WaitForSeconds (0.05f);
 		}
 	}
-
 }
