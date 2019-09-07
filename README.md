@@ -1,12 +1,16 @@
 # Alice-Interactive fiction
 
+## KMLA Integrated Project
+
+### Credit
+
+| 역할 | 담당 |
+|----|----|
+| Game Programmer | 노건호 |
+| Scenario Writer |  |
+| Creative Director | 안종남 |
+| Sound Creator | 이진우 |
+| Graphic Artist | 신보라 |
 
 
-### KMLA Integrated Project
-
-* 노건호 
-* 노유빈
-* 안종남
-* 이진우
-* 신보라
 
