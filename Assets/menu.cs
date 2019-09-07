@@ -7,7 +7,7 @@ public class menu : MonoBehaviour
 {
     public void ToMain()
     {
-    	SceneManager.LoadScene("Main");
+    	SceneManager.LoadScene("Menu");
     }
 
     public void To_chp_1_1()

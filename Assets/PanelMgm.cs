@@ -10,10 +10,8 @@ public class PanelMgm : MonoBehaviour
     	gameObject.SetActive(false);
     }
 
-    void MenuOn()
-    {
-    	gameObject.SetActive(true);
-    }
+
+
 
     // Update is called once per frame
     void Update()
