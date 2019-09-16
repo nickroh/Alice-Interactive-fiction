@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TextShow : MonoBehaviour
 {
-    public Text txt;
+	public Text txt;
 	private string story;
 
 	void Awake()
@@ -23,7 +23,7 @@ public class TextShow : MonoBehaviour
 		foreach(char c in story)
 		{
 			txt.text += c;
-			yield return new WaitForSeconds (0.05f);
+			yield return new WaitForSeconds (0.03f);
 		}
 	}
 }
