@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/chp_1.2.unity
     guid: 076f011fc445f0147852511af8445963
+  - enabled: 1
+    path: Assets/Scenes/chp_1.3.unity
+    guid: f04ec2b7776a7154eb1e31808c5a7cee
   m_configObjects: {}
