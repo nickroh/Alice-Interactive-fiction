@@ -21,7 +21,7 @@ public class Text_FadeIn : MonoBehaviour
 	{
 		if(alpha >= 1.0f)
 		{
-			Invoke("ToChp1_1",2);
+			Invoke("ToChp1_1",1);
 		}
 	}
 

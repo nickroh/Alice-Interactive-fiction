@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,7 +7,7 @@ public class scenemgm_1 : MonoBehaviour
 {
     // Start is called before the first frame update
     
-     public void ToMain()
+    public void ToMain()
     {
     	SceneManager.LoadScene("Main");
     }
