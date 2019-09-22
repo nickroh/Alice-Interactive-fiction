@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+    Scene change
+*/
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

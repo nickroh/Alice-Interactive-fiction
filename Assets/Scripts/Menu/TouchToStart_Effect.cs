@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+	Text Fade in / out loop
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,23 +12,23 @@ public class TouchToStart_Effect : MonoBehaviour
    
     public Text txt;
 	
-	private float alpha = 0.0f;
-	private bool status;
+	private float alpha = 0.0f; // Initial Opacity
+	private bool status; // Increase Opacity or Decrease Opacity True -- Increase False -- Decrease
    
     void Start()
     {
-        txt = GetComponent<Text> ();
+        txt = GetComponent<Text> (); // Get Target Text
 		txt.color = new Color(txt.color.r, txt.color.g, txt.color.b, alpha);
-		status = true;
+		status = true; // Initial status : Increasing
 
-    	StartCoroutine ("PlayText");
+    	StartCoroutine ("PlayText"); // Start Coroutine
     }
 
     IEnumerator PlayText()
     {	
-    	while(true)
+    	while(true) // Fade in / out Loop
 		{
-			if(status == true)
+			if(status == true) // Increase
 			{
 				alpha += 0.01f;
 				txt.color = new Color(txt.color.r, txt.color.g, txt.color.b, alpha);
@@ -35,7 +39,7 @@ public class TouchToStart_Effect : MonoBehaviour
 				yield return new WaitForSeconds (0.01f);
 			}
 
-			if(status == false)
+			if(status == false) // Decrease
 			{
 				alpha -= 0.01f;
 				txt.color = new Color(txt.color.r, txt.color.g, txt.color.b, alpha);
