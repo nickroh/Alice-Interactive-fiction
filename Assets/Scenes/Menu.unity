@@ -685,3 +685,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d15fa89b3801d4f956421c789e3c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  background: {r: 0, g: 0, b: 0, a: 0}

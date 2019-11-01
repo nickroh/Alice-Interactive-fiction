@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class Start_Touch : MonoBehaviour
 {
-	
+	public Color background;
     // Update is called once per frame
     void Update()
     {
@@ -20,13 +20,23 @@ public class Start_Touch : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0)) 
 		{
-			if(!EventSystem.current.IsPointerOverGameObject())
-			{  
-	        	 change();
-			}
-	
+		   	 change();
 		}
     }
+
+    // IEnumerator FadeOut()
+    // {
+    // 	while(true)
+    // 	{
+    // 		GUI.color.a -= 0.1f;
+    // 		if(GUI.color.a < 0.2f)
+    // 		{
+    // 			break;
+    // 		}
+    // 		yield return new WaitForSeconds(0.01f);
+    // 	}
+    // }
+
 
     void change()
     {
