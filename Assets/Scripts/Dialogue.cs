@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -71,13 +71,13 @@ public class Dialogue: MonoBehaviour
 		while(speechText.text != targetSpeech)
 		{
 			speechText.text += targetSpeech[speechText.text.Length];
-			yield return new WaitForEndOfFrame();
+			yield return new WaitForSeconds (0.03f);
 		}
 
 		//text finished
 		isWaitingForUserInput = true;
 		while(isWaitingForUserInput)
-			yield return new WaitForEndOfFrame();
+			yield return new WaitForSeconds (0.03f);
 
 		StopSpeaking();
 	}
