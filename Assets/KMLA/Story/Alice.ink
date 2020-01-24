@@ -1,16 +1,16 @@
 Alice Interactive Fiction
 VAR life = 3
-*  [Begin] -> start
++[Begin] -> start
 ==start==
  토끼를 따라가시겠습니까?
- +[네] ->  Chapter1
- *[아니오] -> start
+    +[네] ->  Chapter1
+    *[아니오] -> start
  ==Chapter1 
  탁자 위에 음식들이 있네요.
  무엇을 고르시겠습니까? 
- * [설탕] -> sugar
- * [물약] -> Potion
- + [복어]
+        * [설탕] -> sugar
+        * [물약] -> Potion
+        + [복어]
   ~ life = life-1
   { 0.5 > life : HP가 0이 되셨습니다. GAMEOVER -> GAMEOVER}
 { life >  0 :  remaining life: {life} }
