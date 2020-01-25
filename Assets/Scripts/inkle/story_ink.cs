@@ -6,8 +6,10 @@ using Ink.Runtime;
 
 public class story_ink : MonoBehaviour
 {
-	 public TextAsset inkJSON;
+	public TextAsset inkJSON;
     private Story story;
+
+    public float txt_speed;
 
     public Text textPrefab;
     public Button buttonPrefab;
@@ -38,20 +40,20 @@ public class story_ink : MonoBehaviour
             text = "<b>" + tags[0] + "</b> - " + text;
         }
        
-        storyText.text = text;
+        // PlayText();
         storyText.transform.SetParent(this.transform, false);
+		//storyText.text = text;
 
+
+		StartCoroutine(PlayText(text, storyText));
         foreach (Choice choice in story.currentChoices)
         {
 
-           
-            
-
             Text choiceText = buttonPrefab.GetComponentInChildren<Text>();
             choiceText.text = choice.text;
-             Button choiceButton = Instantiate(buttonPrefab) as Button;
-             choiceButton.transform.SetParent(this.transform, false);
-            Debug.Log(choiceText.text);
+            Button choiceButton = Instantiate(buttonPrefab) as Button;
+            choiceButton.transform.SetParent(this.transform, false);
+            //Debug.Log(choiceText.text);
 
             choiceButton.onClick.AddListener(delegate {
                 chooseStoryChoice(choice);
@@ -91,4 +93,15 @@ public class story_ink : MonoBehaviour
 
         return text;
     }
+
+    IEnumerator PlayText(string text, Text storyText)
+	{
+
+		foreach(char c in text)
+		{
+			Debug.Log(c);
+			storyText.text += c;
+			yield return new WaitForSeconds (txt_speed);
+		}
+	}
 }

@@ -15,27 +15,9 @@ public class menu : MonoBehaviour
     	SceneManager.LoadScene("Menu");
     }
 
-    public void To_chp_1_1()
+    public void ToGame()
     {
-    	SceneManager.LoadScene("chp_1.1");
-    }
-
-    public void To_chp_1_2()
-    {
-    	SceneManager.LoadScene("chp_1.2");
-    }
-
-    public void To_chp_1_3()
-    {
-    	SceneManager.LoadScene("chp_1.3");
-    }
-    public void To_chp_1_4()
-    {
-    	SceneManager.LoadScene("chp_1.4");
-    }
-    public void To_chp_1_5()
-    {
-    	SceneManager.LoadScene("chp_1.5");
+        SceneManager.LoadScene("inkle");
     }
     
     public void QuitGame()

@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: d65df380ffc606849a070be224aa6b82, type: 3}
+  txt_speed: 0.05
   textPrefab: {fileID: 8133587480758180560, guid: 8f388d547e0c81146a329e29919cf11a,
     type: 3}
   buttonPrefab: {fileID: 2401992988848952226, guid: c09f66767dbd0ec479895754218536ed,

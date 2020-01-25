@@ -40,6 +40,6 @@ public class Start_Touch : MonoBehaviour
 
     void change()
     {
-    	SceneManager.LoadScene("chp_1");
+    	SceneManager.LoadScene("inkle");
     } 
 }
