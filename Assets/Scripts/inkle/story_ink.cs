@@ -14,6 +14,7 @@ public class story_ink : MonoBehaviour
     public Text textPrefab;
     public Button buttonPrefab;
 
+    private IEnumerator coroutine;
 
     // Start is called before the first frame update
     void Start()
@@ -44,8 +45,8 @@ public class story_ink : MonoBehaviour
         storyText.transform.SetParent(this.transform, false);
 		//storyText.text = text;
 
-
-		StartCoroutine(PlayText(text, storyText));
+        coroutine= PlayText(text, storyText);
+		StartCoroutine(coroutine);
         foreach (Choice choice in story.currentChoices)
         {
 
@@ -56,6 +57,7 @@ public class story_ink : MonoBehaviour
             //Debug.Log(choiceText.text);
 
             choiceButton.onClick.AddListener(delegate {
+                StopCoroutine(coroutine);
                 chooseStoryChoice(choice);
             });
 
