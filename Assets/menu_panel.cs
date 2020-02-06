@@ -11,3 +11,5 @@ public class menu_panel : MonoBehaviour
    		SceneManager.LoadScene("Menu");
    }
 }
+
+
