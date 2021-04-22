@@ -26,7 +26,7 @@ public class ContentView : StoryElementView {
 	}
 
 	public override void LayoutText (string content) {
-		base.LayoutText (content);
+		//base.LayoutText (content);
 
 		TypedText.TypedTextSettings textTyperSettings = new TypedText.TypedTextSettings();
 		textTyperSettings.customPostTypePause.Add(new TypedText.CustomStringTimeDelay(",", new TypedText.RandomTimeDelay(0.075f,0.1f)));
@@ -35,11 +35,11 @@ public class ContentView : StoryElementView {
 		textTyperSettings.customPostTypePause.Add(new TypedText.CustomStringTimeDelay(".", new TypedText.RandomTimeDelay(0.3f,0.4f)));
 		textTyperSettings.customPostTypePause.Add(new TypedText.CustomStringTimeDelay("\n", new TypedText.RandomTimeDelay(0.5f,0.6f)));
 		if(Main.Instance.gameState.hasMadeAChoice) {
-			textTyperSettings.splitMode = TypedText.TypedTextSettings.SplitMode.Word;
-			textTyperSettings.defaultTypeDelay = new TypedText.RandomTimeDelay(0.04f,0.065f);
+			textTyperSettings.splitMode = TypedText.TypedTextSettings.SplitMode.Character;
+			textTyperSettings.defaultTypeDelay = new TypedText.RandomTimeDelay(0.06f,0.09f);
 		} else {
 			textTyperSettings.splitMode = TypedText.TypedTextSettings.SplitMode.Character;
-			textTyperSettings.defaultTypeDelay = new TypedText.RandomTimeDelay(0.03f,0.0425f);
+			textTyperSettings.defaultTypeDelay = new TypedText.RandomTimeDelay(0.05f,0.09f);
 		}
 
 		richText = new RichTextSubstring (content);
@@ -47,6 +47,13 @@ public class ContentView : StoryElementView {
 		textTyper.OnTypeText += OnTypeText;
 		textTyper.OnCompleteTyping += CompleteTyping;
 		textTyper.TypeText(richText.plainText, textTyperSettings);
+
+		// richText = new RichTextSubstring (content);
+		// textTyper = new TypedText();
+		// textTyper.OnTypeText += "c";
+		// textTyper.OnCompleteTyping += "b";
+		// textTyper.TypeText(richText.plainText, textTyperSettings);
+
 	}
 
 	void OnTypeText (string newText) {
